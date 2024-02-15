@@ -1,0 +1,168 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Indie Flower";
+  background-color: rgb(102, 102, 102);
+  width: 95%;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+p {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-left: 3.5rem;
+  margin-top: 1rem;
+}
+
+/* -------------------
+   ANIMATION POST-IT
+--------------------- */
+
+@keyframes fade-in-1 {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    transform: translate(30%, 30%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-2 {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    transform: translate(-30%, -30%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-3 {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    transform: translate(-30%, 30%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* @keyframes translation-Post-it{
+    0%{
+       
+    }
+} */
+
+/* -----------------
+   STYLE POST-IT
+-------------------- */
+
+.post-it-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 22%;
+  height: 30vh;
+  box-shadow: 7px 9px 7px rgb(54, 54, 54);
+  transition: all 0.2s;
+}
+
+.green {
+  background: linear-gradient(184deg, rgba(202, 252, 203, 1) 0%, rgba(158, 181, 159, 1) 100%);
+}
+
+.yellow {
+  background: linear-gradient(
+    184deg,
+    rgba(250, 251, 201, 1) 0%,
+    rgba(212, 212, 178, 1) 69%,
+    rgba(189, 189, 164, 1) 100%
+  );
+}
+
+.violet {
+  background: linear-gradient(184deg, rgba(199, 199, 245, 1) 0%, rgba(186, 184, 219, 1) 100%);
+}
+
+/*--------------------------
+  STYLE FOR SINGLE POST-IT 
+  ------------------------*/
+
+main div:first-of-type {
+  rotate: -5deg;
+  animation: fade-in-1 2s 0.5s both;
+}
+main div:nth-of-type(2) {
+  rotate: 5deg;
+  scale: 0.93;
+  animation: fade-in-2 2s 1.5s both;
+}
+main div:nth-of-type(3) {
+  rotate: -9deg;
+  scale: 0.93;
+  animation: fade-in-3 2s 2.5s both;
+}
+main div:nth-of-type(4) {
+  rotate: 10deg;
+  scale: 0.97;
+  animation: fade-in-2 2s 3s both;
+}
+main div:nth-of-type(5) {
+  rotate: -5deg;
+  scale: 0.96;
+  animation: fade-in-3 2s 4.5s both;
+}
+main div:nth-of-type(6) {
+  rotate: -6deg;
+  scale: 0.99;
+  animation: fade-in-1 2s 5.5s both;
+}
+main div:nth-of-type(7) {
+  rotate: -4deg;
+  animation: fade-in-3 2s 6.5s both;
+}
+main div:nth-of-type(8) {
+  rotate: 4deg;
+  animation: fade-in-1 2s 7.5s both;
+}
+
+/* ----------------
+TRANSFORM POST-IT 
+--------------------*/
+
+.post-it-body:hover {
+  z-index: 1;
+  rotate: none;
+  scale: 1.2;
+  font-size: 4.5rem;
+  box-shadow: 11px 9px 15px rgb(65, 64, 64);
+  transition: all 0.3s;
+}
+
+.post-it-body:hover p {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
