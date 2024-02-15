@@ -18,9 +18,6 @@
   position: relative;
 }
 
-.parole {
-}
-
 i {
   color: rgb(90, 147, 159);
   position: absolute;
@@ -29,29 +26,27 @@ i {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translate(50%);
+    transform: translateY(30px);
   }
-  100% {
+  50% {
     opacity: 1;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
+    transform: translateY(0px);
   }
   100% {
     opacity: 0;
-    transform: translate(50%);
+    transform: translateY(-30px);
   }
 }
 
-.parole:first-of-type {
-  margin-bottom: 1rem;
-  animation: fade-in 1s 1.5s backwards;
-  animation: fate-out 6s 6s forwards;
+.parole i:first-of-type {
+  opacity: 0;
+  animation: fade-in 2s 0.5s forwards;
 }
-.parole:ntd-of-type(2) {
+.parole i:nth-of-type(2) {
+  opacity: 0;
+  animation: fade-in 4s 1.5s forwards;
 }
-.parole:last-of-type {
-  margin-top: 1rem;
+.parole i:last-of-type {
+  opacity: 0;
+  animation: fade-in 6s 3.5s forwards;
 }
