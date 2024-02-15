@@ -8,3 +8,50 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+#testoAlternato {
+  width: 25rem;
+  margin: 5rem auto;
+  font-family: "Bree Serif";
+  line-height: 2rem;
+  padding: 2rem;
+  border: 2px solid black;
+  position: relative;
+}
+
+.parole {
+}
+
+i {
+  color: rgb(90, 147, 159);
+  position: absolute;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(50%);
+  }
+}
+
+.parole:first-of-type {
+  margin-bottom: 1rem;
+  animation: fade-in 1s 1.5s backwards;
+  animation: fate-out 6s 6s forwards;
+}
+.parole:ntd-of-type(2) {
+}
+.parole:last-of-type {
+  margin-top: 1rem;
+}
